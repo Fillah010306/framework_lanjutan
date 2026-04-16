@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Website Development",
+    "description": "Pembuatan website profesional",
+    "category": "Development",
+    "price": 5000000,
+    "image": "https://picsum.photos/300/200?1",
+    "details": { "developer": "Tim Web Dev", "duration": "30 days", "support": "1 year" },
+    "tags": ["Website", "Frontend", "Backend"]
+  },
+  {
+    "id": 2,
+    "name": "Mobile App",
+    "description": "Aplikasi Android & iOS",
+    "category": "Development",
+    "price": 8000000,
+    "image": "https://picsum.photos/300/200?2",
+    "details": { "developer": "Mobile Team", "duration": "45 days", "support": "1 year" },
+    "tags": ["Mobile", "Flutter", "React Native"]
+  },
+  {
+    "id": 3,
+    "name": "UI/UX Design",
+    "description": "Desain tampilan aplikasi modern",
+    "category": "Design",
+    "price": 3000000,
+    "image": "https://picsum.photos/300/200?3",
+    "details": { "developer": "Design Team", "duration": "20 days", "support": "6 months" },
+    "tags": ["UI", "UX", "Figma"]
+  },
+  {
+    "id": 4,
+    "name": "SEO Optimization",
+    "description": "Optimasi website di mesin pencari",
+    "category": "Marketing",
+    "price": 2500000,
+    "image": "https://picsum.photos/300/200?4",
+    "details": { "developer": "SEO Expert", "duration": "15 days", "support": "3 months" },
+    "tags": ["SEO", "Google", "Ranking"]
+  },
+  {
+    "id": 5,
+    "name": "Content Writing",
+    "description": "Penulisan konten profesional",
+    "category": "Marketing",
+    "price": 1500000,
+    "image": "https://picsum.photos/300/200?5",
+    "details": { "developer": "Content Team", "duration": "10 days", "support": "1 month" },
+    "tags": ["Content", "Blog", "SEO"]
+  },
+  {
+    "id": 6,
+    "name": "Graphic Design",
+    "description": "Desain grafis kreatif",
+    "category": "Design",
+    "price": 2000000,
+    "image": "https://picsum.photos/300/200?6",
+    "details": { "developer": "Graphic Team", "duration": "12 days", "support": "2 months" },
+    "tags": ["Design", "Photoshop", "Illustrator"]
+  },
+  {
+    "id": 7,
+    "name": "Social Media Management",
+    "description": "Kelola akun sosial media",
+    "category": "Marketing",
+    "price": 3000000,
+    "image": "https://picsum.photos/300/200?7",
+    "details": { "developer": "Social Team", "duration": "30 days", "support": "1 month" },
+    "tags": ["Instagram", "Facebook", "Content"]
+  },
+  {
+    "id": 8,
+    "name": "E-commerce Development",
+    "description": "Pembuatan toko online",
+    "category": "Development",
+    "price": 7000000,
+    "image": "https://picsum.photos/300/200?8",
+    "details": { "developer": "Ecom Team", "duration": "40 days", "support": "1 year" },
+    "tags": ["Ecommerce", "Shop", "Payment"]
+  },
+  {
+    "id": 9,
+    "name": "Landing Page",
+    "description": "Halaman promosi produk",
+    "category": "Design",
+    "price": 1800000,
+    "image": "https://picsum.photos/300/200?9",
+    "details": { "developer": "LP Team", "duration": "7 days", "support": "1 month" },
+    "tags": ["Landing", "UI", "Marketing"]
+  },
+  {
+    "id": 10,
+    "name": "API Development",
+    "description": "Pembuatan REST API",
+    "category": "Development",
+    "price": 4000000,
+    "image": "https://picsum.photos/300/200?10",
+    "details": { "developer": "Backend Team", "duration": "25 days", "support": "6 months" },
+    "tags": ["API", "Backend", "NodeJS"]
+  },
+  {
+    "id": 11,
+    "name": "Cyber Security",
+    "description": "Keamanan sistem aplikasi",
+    "category": "Security",
+    "price": 6000000,
+    "image": "https://picsum.photos/300/200?11",
+    "details": { "developer": "Security Team", "duration": "20 days", "support": "1 year" },
+    "tags": ["Security", "Firewall", "Protection"]
+  },
+  {
+    "id": 12,
+    "name": "Cloud Setup",
+    "description": "Setup server cloud",
+    "category": "Infrastructure",
+    "price": 5500000,
+    "image": "https://picsum.photos/300/200?12",
+    "details": { "developer": "Cloud Team", "duration": "15 days", "support": "6 months" },
+    "tags": ["Cloud", "AWS", "Server"]
+  },
+  {
+    "id": 13,
+    "name": "Database Design",
+    "description": "Desain database optimal",
+    "category": "Development",
+    "price": 3500000,
+    "image": "https://picsum.photos/300/200?13",
+    "details": { "developer": "DB Team", "duration": "20 days", "support": "6 months" },
+    "tags": ["Database", "SQL", "NoSQL"]
+  },
+  {
+    "id": 14,
+    "name": "Video Editing",
+    "description": "Editing video profesional",
+    "category": "Design",
+    "price": 2500000,
+    "image": "https://picsum.photos/300/200?14",
+    "details": { "developer": "Video Team", "duration": "10 days", "support": "1 month" },
+    "tags": ["Video", "Editing", "Premiere"]
+  },
+  {
+    "id": 15,
+    "name": "Digital Ads",
+    "description": "Iklan digital marketing",
+    "category": "Marketing",
+    "price": 4000000,
+    "image": "https://picsum.photos/300/200?15",
+    "details": { "developer": "Ads Team", "duration": "30 days", "support": "1 month" },
+    "tags": ["Ads", "Google Ads", "Facebook Ads"]
+  },
+  {
+    "id": 16,
+    "name": "Chatbot Development",
+    "description": "Pembuatan chatbot otomatis",
+    "category": "Development",
+    "price": 4500000,
+    "image": "https://picsum.photos/300/200?16",
+    "details": { "developer": "AI Team", "duration": "25 days", "support": "6 months" },
+    "tags": ["AI", "Chatbot", "Automation"]
+  },
+  {
+    "id": 17,
+    "name": "Game Development",
+    "description": "Pembuatan game sederhana",
+    "category": "Development",
+    "price": 9000000,
+    "image": "https://picsum.photos/300/200?17",
+    "details": { "developer": "Game Dev Team", "duration": "60 days", "support": "1 year" },
+    "tags": ["Game", "Unity", "Mobile"]
+  },
+  {
+    "id": 18,
+    "name": "IT Consulting",
+    "description": "Konsultasi IT profesional",
+    "category": "Consulting",
+    "price": 2000000,
+    "image": "https://picsum.photos/300/200?18",
+    "details": { "developer": "Consultant", "duration": "5 days", "support": "1 month" },
+    "tags": ["Consulting", "IT", "Business"]
+  },
+  {
+    "id": 19,
+    "name": "Maintenance Service",
+    "description": "Perawatan sistem berkala",
+    "category": "Support",
+    "price": 1500000,
+    "image": "https://picsum.photos/300/200?19",
+    "details": { "developer": "Support Team", "duration": "30 days", "support": "ongoing" },
+    "tags": ["Maintenance", "Support", "Service"]
+  },
+  {
+    "id": 20,
+    "name": "Hosting Service",
+    "description": "Layanan hosting website",
+    "category": "Infrastructure",
+    "price": 1000000,
+    "image": "https://picsum.photos/300/200?20",
+    "details": { "developer": "Hosting Team", "duration": "365 days", "support": "1 year" },
+    "tags": ["Hosting", "Server", "Domain"]
+  }
+]
