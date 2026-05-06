@@ -2,6 +2,7 @@ import PageHeader from "../components/PageHeader";
 import CardStat from "../components/CardStat";
 import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
 import RevenueChart from "../components/RevenueChart";
+
 export default function Dashboard() {
   return (
     <div className="space-y-6">
@@ -11,19 +12,38 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-        <CardStat icon={<FaShoppingCart className="text-white text-2xl" />} value="75" label="Orders" color="bg-green-500" />
-        <CardStat icon={<FaTruck className="text-white text-2xl" />} value="120" label="Delivered" color="bg-blue-500" />
-        <CardStat icon={<FaBan className="text-white text-2xl" />} value="20" label="Canceled" color="bg-red-500" />
-        <CardStat icon={<FaDollarSign className="text-white text-2xl" />} value="Rp 12jt" label="Revenue" color="bg-yellow-500" />
+        <CardStat 
+          icon={<FaShoppingCart className="text-white text-2xl" />} 
+          value="75" 
+          label="Orders" 
+          color="bg-green-500" 
+        />
+        <CardStat 
+          icon={<FaTruck className="text-white text-2xl" />} 
+          value="120" 
+          label="Delivered" 
+          color="bg-blue-500" 
+        />
+        <CardStat 
+          icon={<FaBan className="text-white text-2xl" />} 
+          value="20" 
+          label="Canceled" 
+          color="bg-red-500" 
+        />
+        <CardStat 
+          icon={<FaDollarSign className="text-white text-2xl" />} 
+          value="Rp 12jt" 
+          label="Revenue" 
+          color="bg-yellow-500" 
+        />
       </div>
 
       {/* Section bawah */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        {/* Chart dummy */}
+        {/* Chart */}
         <div className="bg-white p-6 rounded-xl shadow-sm col-span-2">
           <h2 className="text-lg font-semibold mb-4">Revenue Overview</h2>
-
           <RevenueChart />
         </div>
 

@@ -1,22 +1,53 @@
-import BiodataDiri from "./components/BiodataDiri";
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
 
+// Layout (tidak perlu lazy)
+import MainLayout from "./pertemuan7/layouts/MainLayout";
+import AuthLayout from "./pertemuan7/layouts/AuthLayout";
+
+// Loading
+import Loading from "./pertemuan7/components/Loading";
+
+// 🔥 Lazy Pages (INI YANG DIUBAH)
+const Dashboard = React.lazy(() => import("./pertemuan7/pages/Dashboard"));
+const Orders = React.lazy(() => import("./pertemuan7/pages/Orders"));
+const Customers = React.lazy(() => import("./pertemuan7/pages/Customers"));
+
+const Login = React.lazy(() => import("./pertemuan7/pages/auth/Login"));
+const Register = React.lazy(() => import("./pertemuan7/pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pertemuan7/pages/auth/Forgot"));
+
+// Optional lama (boleh lazy juga)
+const BiodataDiri = React.lazy(() => import("./components/BiodataDiri"));
+const RegistrationForm = React.lazy(() => import("./pertemuan3/Form"));
+const DataPage = React.lazy(() => import("./pertemuan4/DataPage"));
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Menampilkan BiodataDiri bawaan kamu */}
-      <BiodataDiri />
+    <Suspense fallback={<Loading />}>
+      <Routes>
 
-      {/* Navigasi Tambahan ke Tugas Pertemuan 3 */}
-      <div className="flex justify-center pb-10">
-        <a 
-          href="/pertemuan3" 
-          className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition text-sm shadow-lg"
-        >
-          Lihat Tugas Form Pertemuan 3 →
-        </a>
-      </div>
-    </div>
+        {/* HALAMAN LAMA */}
+        <Route path="/biodata" element={<BiodataDiri />} />
+        <Route path="/pertemuan3" element={<RegistrationForm />} />
+        <Route path="/pertemuan4" element={<DataPage />} />
+
+        {/* MAIN LAYOUT */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/customers" element={<Customers />} />
+        </Route>
+
+        {/* AUTH LAYOUT */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot" element={<Forgot />} />
+        </Route>
+
+      </Routes>
+    </Suspense>
   );
 }
 
