@@ -52,10 +52,10 @@ export default function Dashboard() {
           <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
 
           <ul className="space-y-3 text-sm">
-            <li>🛒 Order #001 created</li>
-            <li>🚚 Order #002 delivered</li>
-            <li>❌ Order #003 canceled</li>
-            <li>💰 Payment received</li>
+            <li> Order #001 created</li>
+            <li> Order #002 delivered</li>
+            <li> Order #003 canceled</li>
+            <li> Payment received</li>
           </ul>
         </div>
 
