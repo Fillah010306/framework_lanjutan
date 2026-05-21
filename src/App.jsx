@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Layout
@@ -12,6 +12,7 @@ import Loading from "./pertemuan7/components/Loading";
 const Dashboard = React.lazy(() => import("./pertemuan7/pages/Dashboard"));
 const Orders = React.lazy(() => import("./pertemuan7/pages/Orders"));
 const Customers = React.lazy(() => import("./pertemuan7/pages/Customers"));
+const AddCustomer = React.lazy(() => import("./pertemuan7/pages/AddCustomer"));
 
 // TAMBAHAN
 const Products = React.lazy(() => import("./pertemuan7/pages/Products"));
@@ -27,6 +28,9 @@ const RegistrationForm = React.lazy(() => import("./pertemuan3/Form"));
 const DataPage = React.lazy(() => import("./pertemuan4/DataPage"));
 
 function App() {
+
+  // ✅ TAMBAHAN STATE GLOBAL CUSTOMER (WAJIB UNTUK SHARE DATA)
+  const [customers, setCustomers] = useState([]);
 
   return (
     <Suspense fallback={<Loading />}>
@@ -62,9 +66,26 @@ function App() {
             element={<Orders />}
           />
 
+          {/* ✅ CUSTOMERS + SHARE STATE */}
           <Route
             path="/customers"
-            element={<Customers />}
+            element={
+              <Customers
+                customers={customers}
+                setCustomers={setCustomers}
+              />
+            }
+          />
+
+          {/* ✅ ADD CUSTOMER PAGE */}
+          <Route
+            path="/customers/add"
+            element={
+              <AddCustomer
+                customers={customers}
+                setCustomers={setCustomers}
+              />
+            }
           />
 
           {/* PRODUCTS */}

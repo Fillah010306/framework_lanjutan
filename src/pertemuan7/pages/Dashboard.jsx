@@ -1,85 +1,136 @@
 import PageHeader from "../components/PageHeader";
 import CardStat from "../components/CardStat";
-import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
+import Card from "../components/Card";
+import SectionTitle from "../components/SectionTitle";
+import ActivityList from "../components/ActivityList";
+import ProductList from "../components/ProductList";
 import RevenueChart from "../components/RevenueChart";
 
+
+
+
+import {
+  FaShoppingCart,
+  FaTruck,
+  FaBan,
+  FaDollarSign,
+} from "react-icons/fa";
+
 export default function Dashboard() {
+
+  const stats = [
+    {
+      id: 1,
+      icon: <FaShoppingCart className="text-white text-2xl" />,
+      value: "75",
+      label: "Orders",
+      color: "bg-green-500",
+    },
+    {
+      id: 2,
+      icon: <FaTruck className="text-white text-2xl" />,
+      value: "120",
+      label: "Delivered",
+      color: "bg-blue-500",
+    },
+    {
+      id: 3,
+      icon: <FaBan className="text-white text-2xl" />,
+      value: "20",
+      label: "Canceled",
+      color: "bg-red-500",
+    },
+    {
+      id: 4,
+      icon: <FaDollarSign className="text-white text-2xl" />,
+      value: "Rp 12jt",
+      label: "Revenue",
+      color: "bg-yellow-500",
+    },
+  ];
+
+  const activities = [
+    "Order #001 created",
+    "Order #002 delivered",
+    "Order #003 canceled",
+    "Payment received",
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: "Product A",
+      sold: 120,
+    },
+    {
+      id: 2,
+      name: "Product B",
+      sold: 95,
+    },
+    {
+      id: 3,
+      name: "Product C",
+      sold: 80,
+    },
+  ];
+
   return (
     <div className="space-y-6">
 
-      {/* Header */}
       <PageHeader />
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-        <CardStat 
-          icon={<FaShoppingCart className="text-white text-2xl" />} 
-          value="75" 
-          label="Orders" 
-          color="bg-green-500" 
-        />
-        <CardStat 
-          icon={<FaTruck className="text-white text-2xl" />} 
-          value="120" 
-          label="Delivered" 
-          color="bg-blue-500" 
-        />
-        <CardStat 
-          icon={<FaBan className="text-white text-2xl" />} 
-          value="20" 
-          label="Canceled" 
-          color="bg-red-500" 
-        />
-        <CardStat 
-          icon={<FaDollarSign className="text-white text-2xl" />} 
-          value="Rp 12jt" 
-          label="Revenue" 
-          color="bg-yellow-500" 
-        />
+
+        {stats.map((stat) => (
+          <CardStat
+            key={stat.id}
+            icon={stat.icon}
+            value={stat.value}
+            label={stat.label}
+            color={stat.color}
+          />
+        ))}
+
       </div>
 
-      {/* Section bawah */}
+      {/* Middle Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-sm col-span-2">
-          <h2 className="text-lg font-semibold mb-4">Revenue Overview</h2>
+        <Card className="col-span-2">
+
+          <SectionTitle>
+            Revenue Overview
+          </SectionTitle>
+
           <RevenueChart />
-        </div>
+
+        </Card>
 
         {/* Activity */}
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
+        <Card>
 
-          <ul className="space-y-3 text-sm">
-            <li> Order #001 created</li>
-            <li> Order #002 delivered</li>
-            <li> Order #003 canceled</li>
-            <li> Payment received</li>
-          </ul>
-        </div>
+          <SectionTitle>
+            Recent Activity
+          </SectionTitle>
+
+          <ActivityList activities={activities} />
+
+        </Card>
 
       </div>
 
-      {/* Bottom section */}
-      <div className="bg-white p-6 rounded-xl shadow-sm">
-        <h2 className="text-lg font-semibold mb-4">Top Products</h2>
+      {/* Bottom */}
+      <Card>
 
-        <div className="flex justify-between text-sm border-b py-2">
-          <span>Product A</span>
-          <span className="text-green-500">120 sold</span>
-        </div>
+        <SectionTitle>
+          Top Products
+        </SectionTitle>
 
-        <div className="flex justify-between text-sm border-b py-2">
-          <span>Product B</span>
-          <span className="text-green-500">95 sold</span>
-        </div>
+        <ProductList products={products} />
 
-        <div className="flex justify-between text-sm py-2">
-          <span>Product C</span>
-          <span className="text-green-500">80 sold</span>
-        </div>
-      </div>
+      </Card>
 
     </div>
   );
